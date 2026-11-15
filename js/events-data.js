@@ -74,7 +74,7 @@
       ticketUrl: '',
       socialUrl: 'https://www.instagram.com/rosslivermore',
       linkLabel: 'Ross on Instagram',
-      photo: 'assets/img/events/placeholder-artist.svg',   // stand-in: replace with a real photo of the artist
+      photo: 'assets/img/events/ross-livermore.jpg',
       photoName: 'Ross Livermore',
       tag: 'Live show',
       image: '',

@@ -38,10 +38,11 @@
       ph.appendChild(ht);
       var deco = ['pthumb__wash', 'pthumb__shade', 'pthumb__frame'];
       deco.forEach(function (c) { var d = el('div', c); d.setAttribute('aria-hidden', 'true'); ph.appendChild(d); });
-      if (ev.tag) ph.appendChild(el('span', 'pthumb__tag', ev.tag));
-      var nm = el('span', 'pthumb__name', ev.photoName || ev.title);
-      nm.setAttribute('aria-hidden', 'true');
-      ph.appendChild(nm);
+      var cap = el('div', 'pthumb__caption');
+      cap.setAttribute('aria-hidden', 'true');
+      if (ev.tag) cap.appendChild(el('span', 'pthumb__tag', ev.tag));
+      cap.appendChild(el('span', 'pthumb__name', ev.photoName || ev.title));
+      ph.appendChild(cap);
       wrap.appendChild(ph);
     } else {
       var f = ev.flyer || { style: 'neon', big: ev.title, hand: '' };

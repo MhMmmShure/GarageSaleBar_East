@@ -582,24 +582,24 @@ ul, ol { padding: 0; list-style: none; }
 
 /* artist photos: photocopy halftone + neon, applied to any plain photo */
 .pthumb { position: absolute; inset: 0; overflow: hidden; isolation: isolate; background: #000; }
-.pthumb__ht { position: absolute; inset: 0; background: #fff; filter: contrast(14); }
-.pthumb__ht img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) brightness(1.45) contrast(1.05) blur(.7px); }
-.pthumb__ht::after { /* dot screen: multiplied with the photo, then thresholded by the contrast filter above */
+.pthumb__ht { position: absolute; inset: 0; background: #fff; filter: contrast(2.4); }
+.pthumb__ht img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) brightness(1.55) contrast(1.25) blur(.3px); }
+.pthumb__ht::after { /* dot screen: multiplied with the photo, then pushed by the contrast filter above */
   content: ""; position: absolute; inset: 0; mix-blend-mode: multiply;
   background:
-    radial-gradient(circle at center, #6c6c6c 0, #fff 74%) 0 0 / 2cqw 2cqw,
-    radial-gradient(circle at center, #6c6c6c 0, #fff 74%) 1cqw 1cqw / 2cqw 2cqw;
+    radial-gradient(circle at center, #8a8a8a 0, #fff 75%) 0 0 / 1.7cqw 1.7cqw,
+    radial-gradient(circle at center, #8a8a8a 0, #fff 75%) .85cqw .85cqw / 1.7cqw 1.7cqw;
 }
 .pthumb__wash { position: absolute; inset: 0; mix-blend-mode: multiply; background: linear-gradient(155deg, var(--pink) 0 52%, var(--blue) 100%); }
 .pthumb__shade { position: absolute; inset: 45% 0 0 0; background: linear-gradient(transparent, rgba(0, 0, 0, .92) 72%); }
 .pthumb__frame { position: absolute; inset: 3.2cqw; border: .9cqw solid #fff; border-radius: 3cqw; box-shadow: 0 0 2cqw var(--pink), 0 0 5cqw var(--pink), inset 0 0 2cqw var(--pink), inset 0 0 5cqw rgba(255, 0, 214, .7); }
+.pthumb__caption { position: absolute; left: 8cqw; right: 8cqw; bottom: 8cqw; display: grid; justify-items: start; gap: 3cqw; }
 .pthumb__name {
-  position: absolute; left: 8cqw; right: 8cqw; bottom: 8cqw;
   font-family: var(--f-cond); text-transform: uppercase; font-size: 17cqw; line-height: .92; letter-spacing: .01em; color: #fff;
   text-shadow: 0 0 1.2cqw #fff, 0 0 3.5cqw var(--pink), 0 0 8cqw var(--pink);
 }
 .pthumb__tag {
-  position: absolute; right: 7cqw; top: 8cqw; transform: rotate(4deg);
+  transform: rotate(-3deg);
   font-family: var(--f-hand); font-size: 6cqw; line-height: 1; color: var(--ink); background: var(--paper); padding: 1.6cqw 3cqw 1.2cqw;
 }
 
