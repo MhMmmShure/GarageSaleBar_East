@@ -6,7 +6,6 @@
 @font-face { font-family: "Archivo"; src: url("../assets/fonts/archivo-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 @font-face { font-family: "Archivo"; src: url("../assets/fonts/archivo-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
 @font-face { font-family: "Alfa Slab One"; src: url("../assets/fonts/alfa-slab-one-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Kaushan Script"; src: url("../assets/fonts/kaushan-script-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "Permanent Marker"; src: url("../assets/fonts/permanent-marker-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
 :root {
@@ -22,7 +21,6 @@
   --f-display: "Archivo Black", "Arial Black", Impact, sans-serif;
   --f-cond: "Anton", "Arial Narrow", Impact, sans-serif;
   --f-hand: "Permanent Marker", "Comic Sans MS", cursive;
-  --f-script: "Kaushan Script", "Brush Script MT", cursive;
   --f-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
 
   --nav-h: 84px;
@@ -1022,36 +1020,37 @@ ul, ol { padding: 0; list-style: none; }
   .hphoto__lights { opacity: .8; }
 }
 
-/* ---------- Location notes: torn paper, stripe motif, script lettering ---------- */
+/* ---------- Location notes: torn paper, stripe motif, marker lettering ---------- */
 .ransom--inline.is-cut { display: inline-flex; flex-wrap: nowrap; gap: 0; vertical-align: middle; padding: 0; margin: 0 .12em; font-size: 1.05em; }
-.paper-note { position: relative; z-index: 3; color: var(--ink); background: var(--paper); filter: drop-shadow(7px 9px 0 rgba(0, 0, 0, .6)); }
-.paper-note p { font-family: var(--f-script); font-size: clamp(1.3rem, 2vw, 1.65rem); line-height: 1.4; }
+.paper-note { position: relative; z-index: 3; color: var(--ink); background: var(--paper); filter: drop-shadow(6px 8px 0 rgba(0, 0, 0, .6)); }
+.paper-note p { font-family: var(--f-hand); font-size: 1rem; line-height: 1.45; }
 .paper-note__stripes { display: block; background: repeating-linear-gradient(90deg,
-  var(--pink) 0 22px, var(--gold) 22px 44px, #00a79d 44px 66px, #2f6bff 66px 88px, var(--red) 88px 110px, var(--green) 110px 132px, var(--ink) 132px 154px); }
+  var(--pink) 0 16px, var(--gold) 16px 32px, #00a79d 32px 48px, #2f6bff 48px 64px, var(--red) 64px 80px, var(--green) 80px 96px, var(--ink) 96px 112px); }
 
-/* home: a note torn on all four sides, stripe band across the top, pinned at the foot of the Vintage section */
+/* home: small note torn on all four sides, stripe band across the top, to the right of the price tag */
 .paper-note--pinned {
-  position: absolute; right: max(var(--gutter), calc(50% - 590px)); bottom: clamp(36px, 6vh, 72px); width: min(430px, 42vw);
-  padding: 0 26px 28px; transform: rotate(-2.5deg);
+  position: absolute; right: max(14px, calc(50% - 706px)); top: 50%; width: clamp(165px, 15.5vw, 228px);
+  padding: 0 16px 20px; transform: translateY(-40%) rotate(4deg);
   clip-path: polygon(0 3%, 5% 0, 13% 2%, 24% 0, 37% 3%, 50% 0, 63% 2%, 77% 0, 90% 3%, 100% 1%, 98% 16%, 100% 31%, 97% 47%, 100% 63%, 98% 80%, 100% 96%, 91% 100%, 78% 97%, 64% 100%, 50% 97%, 35% 100%, 21% 97%, 8% 100%, 0 97%, 2% 81%, 0 64%, 3% 48%, 0 32%, 2% 15%);
 }
-.paper-note--pinned .paper-note__stripes { height: 26px; margin: 0 -26px 20px; }
-.feature--vintage { padding-bottom: clamp(190px, 26vh, 280px); }
+.paper-note--pinned .paper-note__stripes { height: 18px; margin: 0 -16px 14px; }
+.paper-note--pinned p { font-size: clamp(.86rem, 1.05vw, 1rem); }
+.feature--vintage .floater--tag { justify-self: start; margin-left: clamp(0px, 2vw, 40px); width: min(76%, 300px); }
 
-/* vintage page: a wide strip torn at both ends, stripe block down the left side, below the three columns */
+/* vintage page: narrow strip torn at both ends, stripe block down the left side, below the three columns */
 .paper-note--strip {
-  display: grid; grid-template-columns: clamp(54px, 9vw, 110px) minmax(0, 1fr); align-items: stretch;
-  max-width: 900px; margin: clamp(48px, 7vw, 84px) auto 0; transform: rotate(1.4deg);
+  display: grid; grid-template-columns: clamp(40px, 6vw, 64px) minmax(0, 1fr); align-items: stretch;
+  max-width: 600px; margin: clamp(44px, 6vw, 72px) auto 0; transform: rotate(-3deg);
   clip-path: polygon(0 8%, 1.5% 0, 3% 9%, 100% 0, 98.5% 14%, 100% 30%, 98% 47%, 100% 64%, 98.5% 82%, 100% 100%, 3% 92%, 1.5% 100%, 0 90%, 1.5% 72%, 0 55%, 2% 38%, 0 22%);
 }
 .paper-note--strip .paper-note__stripes { background: repeating-linear-gradient(0deg,
-  var(--pink) 0 16px, var(--gold) 16px 32px, #00a79d 32px 48px, #2f6bff 48px 64px, var(--red) 64px 80px, var(--green) 80px 96px, var(--ink) 96px 112px); }
-.paper-note--strip p { padding: clamp(22px, 3vw, 34px) clamp(22px, 4vw, 44px) clamp(24px, 3.2vw, 36px) clamp(18px, 3vw, 32px); font-size: clamp(1.35rem, 2.3vw, 1.9rem); }
-.paper-note--strip .ransom--inline { font-size: 1.2em; }
+  var(--pink) 0 12px, var(--gold) 12px 24px, #00a79d 24px 36px, #2f6bff 36px 48px, var(--red) 48px 60px, var(--green) 60px 72px, var(--ink) 72px 84px); }
+.paper-note--strip p { padding: 20px 26px 22px 18px; font-size: clamp(1rem, 1.5vw, 1.15rem); }
 .racks { padding-bottom: clamp(110px, 13vw, 190px); }
 
 @media (max-width: 900px) {
-  .paper-note--pinned { position: relative; right: auto; bottom: auto; width: auto; max-width: 420px; margin: 34px 0 0; }
-  .feature--vintage { padding-bottom: 96px; }
+  .paper-note--pinned { position: relative; right: auto; top: auto; width: auto; max-width: 300px; margin: 30px 0 0; transform: rotate(3deg); }
+  .paper-note--pinned p { font-size: .95rem; }
+  .feature--vintage .floater--tag { justify-self: center; margin-left: 0; }
   .racks { padding-bottom: 150px; }
 }
