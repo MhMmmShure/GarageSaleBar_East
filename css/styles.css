@@ -162,7 +162,49 @@ ul, ol { padding: 0; list-style: none; }
 .hero__logo {
   width: auto; height: min(50vh, 512px);
   mix-blend-mode: screen;
-  animation: sign-on 1.8s steps(1, end) both;
+  /* 1) the sign switching on at load (unchanged), then
+     2) a slow, irregular "last call" loop: long steady stretches, then the tubes sag and
+        sputter as if the sign is about to be switched off for the night. It never goes fully dark. */
+  animation:
+    sign-on 1.8s steps(1, end) both,
+    last-call 13s linear 4.5s infinite,
+    last-call-buzz 7.3s steps(1, end) 4.5s infinite;
+}
+@keyframes last-call {
+  0%, 38%   { opacity: 1; }
+  /* a single nervous blink */
+  38.6%     { opacity: .62; }
+  39.2%     { opacity: 1; }
+  /* steady again, then the sag: power draining out of the tubes */
+  61%       { opacity: 1; }
+  66%       { opacity: .74; }
+  68%       { opacity: .5; }
+  /* sputter while it tries to hold on */
+  68.5%     { opacity: .86; }
+  69.1%     { opacity: .42; }
+  69.6%     { opacity: .7; }
+  70.2%     { opacity: .36; }
+  /* hangs there, almost out */
+  74%       { opacity: .34; }
+  74.5%     { opacity: .58; }
+  75.3%     { opacity: .38; }
+  /* catches and comes back, a little unsure */
+  76.2%     { opacity: 1; }
+  76.9%     { opacity: .8; }
+  77.6%     { opacity: 1; }
+  91%       { opacity: 1; }
+  91.5%     { opacity: .7; }
+  92%, 100% { opacity: 1; }
+}
+/* a faint electrical buzz on a different clock, so the two never line up the same way twice in a row */
+@keyframes last-call-buzz {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  46%      { filter: brightness(1.12) saturate(1.15); }
+  47.5%    { filter: brightness(.9) saturate(.9); }
+  49%      { filter: brightness(1.06) saturate(1.05); }
+  50.5%    { filter: brightness(1) saturate(1); }
+  83%      { filter: brightness(.86) saturate(.85); }
+  84.5%    { filter: brightness(1) saturate(1); }
 }
 @keyframes sign-on {
   0% { opacity: 0; } 8% { opacity: 1; } 12% { opacity: .15; } 20% { opacity: 1; }
