@@ -6,6 +6,7 @@ No build step: plain HTML, CSS and JavaScript.
 ## Structure
 
 - `index.html` — home page (hero, vintage, bar, happy hour, menu, short events list, booking, map, footer)
+- `vintage.html` — vintage page (mission, what's on the racks, vendor application)
 - `events.html` — full events listing with thumbnails, descriptions and ticket/social links
 - `js/events-data.js` — the event data both pages are built from
 - `css/styles.css` — styles; brand colors and fonts are CSS variables at the top

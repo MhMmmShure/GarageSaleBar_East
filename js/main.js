@@ -87,6 +87,8 @@
   var dow = today.getDay();
   var openEl = document.getElementById('open-today');
   if (openEl) openEl.textContent = 'Open today ' + HOURS[dow][0] + ' to ' + HOURS[dow][1] + '.';
+  var openEl2 = document.getElementById('open-today-2');
+  if (openEl2) openEl2.textContent = 'Open today ' + HOURS[dow][0] + ' to ' + HOURS[dow][1] + '.';
   [].forEach.call(document.querySelectorAll('#hours tr'), function (tr) {
     if (tr.getAttribute('data-days').split(',').indexOf(String(dow)) !== -1) tr.classList.add('is-today');
   });
