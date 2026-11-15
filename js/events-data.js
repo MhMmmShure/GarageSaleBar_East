@@ -8,7 +8,7 @@
      date         ONE_OFFS only: 'YYYY-MM-DD'
      time         Shown after the date, e.g. '7 to 10 PM' or 'Doors 9 PM'
      short        One line for the home page list
-     description  Longer text for the events page
+     description  Longer text for the events page (see the writing guide below)
      price        Optional, e.g. '$10 cover'
      ticketUrl    Link to tickets. Leave '' if there are none.
      socialUrl    Link to the social post about the event. Used when there is no ticketUrl.
@@ -16,6 +16,14 @@
      image        Optional poster/thumbnail, e.g. 'assets/img/events/jake-morgan.jpg' (square works best).
                   If '', a flyer is drawn from `flyer`.
      flyer        { style: 'paper' | 'pink' | 'blue' | 'green' | 'neon', big: 'BIG WORDS', hand: 'small words' }
+
+   Writing guide for event cards (every card has the same rows, so they line up)
+     title        Up to about 45 characters. Shows on 2 lines at most; longer titles are cut with "...".
+     time/price   One line, about 30 characters, e.g. 'Doors 9 PM, $10 cover'.
+     description  The first 3 lines (roughly 110 characters) are always visible, so lead with
+                  who is playing and what kind of night it is. Anything longer is cut with "..."
+                  and the full text opens on hover or with "Read more". Keep the full text
+                  under about 400 characters; link out for anything longer.
 */
 (function () {
   'use strict';
