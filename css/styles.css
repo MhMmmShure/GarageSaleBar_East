@@ -223,6 +223,9 @@ ul, ol { padding: 0; list-style: none; }
 .cutout__w--green { background: var(--green); transform: rotate(3deg) translateY(3px); font-family: var(--f-cond); letter-spacing: .04em; }
 .hero__meta { font-size: 1rem; color: rgba(240, 229, 208, .82); margin-top: 6px; }
 .hero__meta span { color: var(--green); font-weight: 600; }
+.hero__family, .page-hero__family { font-weight: 600; font-size: 1rem; line-height: 1.45; color: var(--paper); max-width: 46ch; padding: 10px 14px; border-left: 4px solid var(--pink); background: rgba(0, 0, 0, .55); text-align: left; }
+.hero__family { margin-top: 4px; }
+.page-hero__family { margin-top: 16px; border-left-color: var(--blue); }
 
 /* ---------- Torn paper edges ---------- */
 .torn { position: relative; z-index: 2; }
