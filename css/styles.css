@@ -223,9 +223,8 @@ ul, ol { padding: 0; list-style: none; }
 .cutout__w--green { background: var(--green); transform: rotate(3deg) translateY(3px); font-family: var(--f-cond); letter-spacing: .04em; }
 .hero__meta { font-size: 1rem; color: rgba(240, 229, 208, .82); margin-top: 6px; }
 .hero__meta span { color: var(--green); font-weight: 600; }
-.hero__family, .page-hero__family { font-weight: 600; font-size: 1rem; line-height: 1.45; color: var(--paper); max-width: 46ch; padding: 10px 14px; border-left: 4px solid var(--pink); background: rgba(0, 0, 0, .55); text-align: left; }
-.hero__family { margin-top: 4px; }
-.page-hero__family { margin-top: 16px; border-left-color: var(--blue); }
+.family-note { font-weight: 600; line-height: 1.45; color: var(--paper); max-width: 46ch; padding: 10px 14px; border-left: 4px solid var(--blue); background: rgba(0, 0, 0, .55); }
+.family-note--center { max-width: 62ch; margin: 0 auto clamp(36px, 5vw, 60px); text-align: center; border-left: 0; border-top: 4px solid var(--blue); padding: 14px 18px; font-size: 1.1rem; }
 
 /* ---------- Torn paper edges ---------- */
 .torn { position: relative; z-index: 2; }
@@ -735,7 +734,7 @@ ul, ol { padding: 0; list-style: none; }
 
 .racks { background: var(--black); padding: clamp(80px, 10vw, 130px) var(--gutter) clamp(64px, 8vw, 110px); }
 .racks__inner { max-width: var(--wrap); margin: 0 auto; }
-.racks__title { font-family: var(--f-display); text-transform: uppercase; font-size: clamp(2.2rem, 5vw, 4rem); line-height: .95; letter-spacing: -.02em; text-align: center; margin-bottom: clamp(36px, 5vw, 64px); }
+.racks__title { font-family: var(--f-display); text-transform: uppercase; font-size: clamp(2.2rem, 5vw, 4rem); line-height: .95; letter-spacing: -.02em; text-align: center; margin-bottom: clamp(20px, 3vw, 32px); }
 .racks__grid .strip__col { grid-row: span 4; }
 .racks__grid h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.25rem, 1.9vw, 1.6rem); text-transform: uppercase; line-height: 1.05; }
 .racks__grid .strip__icon { color: var(--blue); filter: drop-shadow(0 0 8px var(--blue)); }
