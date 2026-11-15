@@ -36,4 +36,4 @@ They start collecting submissions once the site is deployed on Netlify with form
 
 - **Cutout headings**: add `class="ransom" data-ransom` to any heading and the letters are cut out automatically.
 - **Alternate lockup**: the `<svg class="lockup">` block (see any footer).
-- **Eyes, lips, collage banner**: `assets/img/eye-*.webp`, `eyes-strip.webp`, `lips.webp`, `collage-banner.webp`.
+- **Eyes, lips, collage banner**: `assets/img/eye-*.webp`, `eyes-strip.webp`, `lips.webp`, `collage-banner-neon.webp`.

@@ -144,12 +144,12 @@ ul, ol { padding: 0; list-style: none; }
   opacity: .92; z-index: -1; will-change: transform;
 }
 .hero__side--left {
-  left: 0; background-image: url("../assets/img/collage-left.webp");
+  left: 0; background-image: url("../assets/img/collage-left-neon.webp");
   -webkit-mask-image: linear-gradient(90deg, #000 86%, transparent 100%);
           mask-image: linear-gradient(90deg, #000 86%, transparent 100%);
 }
 .hero__side--right {
-  right: 0; background-image: url("../assets/img/collage-right.webp"); background-position: left center;
+  right: 0; background-image: url("../assets/img/collage-right-neon.webp"); background-position: left center;
   -webkit-mask-image: linear-gradient(270deg, #000 90%, transparent 100%);
           mask-image: linear-gradient(270deg, #000 90%, transparent 100%);
 }
