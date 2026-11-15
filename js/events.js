@@ -27,6 +27,22 @@
       img.alt = ev.title + ' poster';
       img.loading = 'lazy';
       wrap.appendChild(img);
+    } else if (ev.photo) {
+      var ph = el('div', 'pthumb');
+      var ht = el('div', 'pthumb__ht');
+      var pimg = el('img');
+      pimg.src = ev.photo;
+      pimg.alt = (ev.photoName || ev.title);
+      pimg.loading = 'lazy';
+      ht.appendChild(pimg);
+      ph.appendChild(ht);
+      var deco = ['pthumb__wash', 'pthumb__shade', 'pthumb__frame'];
+      deco.forEach(function (c) { var d = el('div', c); d.setAttribute('aria-hidden', 'true'); ph.appendChild(d); });
+      if (ev.tag) ph.appendChild(el('span', 'pthumb__tag', ev.tag));
+      var nm = el('span', 'pthumb__name', ev.photoName || ev.title);
+      nm.setAttribute('aria-hidden', 'true');
+      ph.appendChild(nm);
+      wrap.appendChild(ph);
     } else {
       var f = ev.flyer || { style: 'neon', big: ev.title, hand: '' };
       var flyer = el('div', 'flyer flyer--' + (f.style || 'neon'));

@@ -13,8 +13,12 @@
      ticketUrl    Link to tickets. Leave '' if there are none.
      socialUrl    Link to the social post about the event. Used when there is no ticketUrl.
                   If both are '', the button goes to the Instagram profile.
-     image        Optional poster/thumbnail, e.g. 'assets/img/events/jake-morgan.jpg' (square works best).
-                  If '', a flyer is drawn from `flyer`.
+     photo        Artist photo for shows, e.g. 'assets/img/events/ross-livermore.jpg' (square, 800px or larger).
+                  The site applies the halftone + neon treatment and adds the name, so use a plain photo.
+     photoName    Name shown in neon over the photo. Defaults to the title.
+     tag          Optional small sticker on the photo, e.g. 'Live show'.
+     image        Optional finished poster, shown exactly as supplied (square works best).
+                  Order of use: image, then photo, then a flyer drawn from `flyer`.
      flyer        { style: 'paper' | 'pink' | 'blue' | 'green' | 'neon', big: 'BIG WORDS', hand: 'small words' }
 
    Writing guide for event cards (every card has the same rows, so they line up)
@@ -59,20 +63,22 @@
   ];
 
   GSB.ONE_OFFS = [
-    /* Example:
     {
-      date: '2026-12-31',
-      title: "New Year's Eve",
-      time: 'Doors 9 PM',
-      short: 'Ring it in at Garage Sale.',
-      description: 'Longer description for the events page.',
-      price: '$10 cover',
-      ticketUrl: 'https://www.eventbrite.com/...',
+      date: '2026-11-20',
+      title: 'Ross Livermore',
+      time: '9:30 PM to 12 AM',
+      short: 'Live show. $10 at the door.',
+      description: 'Ross Livermore plays the late slot at Garage Sale Bar. Tickets are $10 at the door.',
+      price: '$10 at the door',
+      ticketUrl: '',
       socialUrl: '',
+      photo: 'assets/img/events/placeholder-artist.svg',   // stand-in: replace with a real photo of the artist
+      photoName: 'Ross Livermore',
+      tag: 'Live show',
       image: '',
-      flyer: { style: 'neon', big: 'NYE', hand: 'at Garage Sale' }
+      flyer: { style: 'neon', big: 'Ross Livermore', hand: 'live' }
     }
-    */
+    /* Copy the block above for each new show. */
   ];
 
   /* Today's date in Nashville, as a local-midnight Date */

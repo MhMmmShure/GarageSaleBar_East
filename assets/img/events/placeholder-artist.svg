@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <!-- Stand-in artwork. Replace with a real artist photo (square, 800px or larger). -->
+  <defs>
+    <radialGradient id="bg" cx="68%" cy="22%" r="85%"><stop offset="0" stop-color="#f4f4f4"/><stop offset=".55" stop-color="#8c8c8c"/><stop offset="1" stop-color="#1e1e1e"/></radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d8d8d8"/><stop offset=".5" stop-color="#6a6a6a"/><stop offset="1" stop-color="#151515"/></linearGradient>
+    <linearGradient id="skin" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#9a9a9a"/><stop offset="1" stop-color="#3a3a3a"/></linearGradient>
+    <linearGradient id="gtr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eeeeee"/><stop offset="1" stop-color="#4a4a4a"/></linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <!-- stage light beam -->
+  <path d="M430 0 L600 0 L600 120 L250 600 L60 600 Z" fill="#fff" opacity=".28"/>
+  <!-- mic stand -->
+  <rect x="150" y="250" width="9" height="350" fill="#111"/>
+  <rect x="150" y="238" width="120" height="9" transform="rotate(-24 150 242)" fill="#111"/>
+  <ellipse cx="262" cy="190" rx="24" ry="17" transform="rotate(-24 262 190)" fill="#222"/>
+  <!-- torso -->
+  <path d="M215 600 C215 430 250 345 335 330 C430 345 480 430 492 600 Z" fill="url(#body)"/>
+  <!-- neck + head -->
+  <rect x="318" y="270" width="50" height="75" rx="18" fill="url(#skin)"/>
+  <ellipse cx="340" cy="212" rx="68" ry="82" fill="url(#skin)"/>
+  <!-- hair -->
+  <path d="M268 205 C262 120 330 96 378 118 C424 138 420 196 408 222 C398 176 372 160 330 164 C300 166 282 180 268 205 Z" fill="#141414"/>
+  <!-- guitar -->
+  <g transform="rotate(-28 360 470)">
+    <rect x="330" y="250" width="26" height="230" fill="#2a2a2a"/>
+    <rect x="322" y="214" width="42" height="46" rx="6" fill="#1a1a1a"/>
+    <path d="M343 455 C415 440 455 480 452 530 C450 585 400 615 343 615 C286 615 236 585 234 530 C231 480 271 440 343 455 Z" fill="url(#gtr)" stroke="#111" stroke-width="6"/>
+    <circle cx="343" cy="528" r="30" fill="#111"/>
+    <rect x="312" y="572" width="62" height="10" fill="#111"/>
+  </g>
+  <!-- strumming arm -->
+  <path d="M452 400 C500 430 505 500 440 520 L425 492 C460 478 455 450 430 430 Z" fill="url(#skin)"/>
+</svg>
