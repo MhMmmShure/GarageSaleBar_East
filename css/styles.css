@@ -139,20 +139,21 @@ ul, ol { padding: 0; list-style: none; }
   isolation: isolate;
 }
 .hero__side {
-  position: absolute; top: -6%; bottom: -6%; width: min(34vw, 520px);
+  position: absolute; top: -6%; bottom: -6%; width: min(39vw, 600px);
   background-size: cover; background-position: center;
   opacity: .92; z-index: -1; will-change: transform;
 }
 .hero__side--left {
   left: 0; background-image: url("../assets/img/collage-left-neon.webp");
-  -webkit-mask-image: linear-gradient(90deg, #000 86%, transparent 100%);
-          mask-image: linear-gradient(90deg, #000 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 52%, rgba(0, 0, 0, .55) 78%, transparent 100%);
+          mask-image: linear-gradient(90deg, #000 52%, rgba(0, 0, 0, .55) 78%, transparent 100%);
 }
 .hero__side--right {
   right: 0; background-image: url("../assets/img/collage-right-neon.webp"); background-position: left center;
-  -webkit-mask-image: linear-gradient(270deg, #000 90%, transparent 100%);
-          mask-image: linear-gradient(270deg, #000 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(270deg, #000 58%, rgba(0, 0, 0, .6) 80%, transparent 100%);
+          mask-image: linear-gradient(270deg, #000 58%, rgba(0, 0, 0, .6) 80%, transparent 100%);
 }
+@media (max-width: 1280px) and (min-width: 901px) { .hero__side { width: 33vw; } }
 .hero::after { /* fade to the paper tear */
   content: ""; position: absolute; inset: auto 0 0 0; height: 140px; z-index: -1;
   background: linear-gradient(transparent, #000);
