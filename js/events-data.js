@@ -13,6 +13,7 @@
      ticketUrl    Link to tickets. Leave '' if there are none.
      socialUrl    Link to the social post about the event. Used when there is no ticketUrl.
                   If both are '', the button goes to the Instagram profile.
+     linkLabel    Optional button text for a socialUrl that is not a single post, e.g. 'Ross on Instagram'.
      photo        Artist photo for shows, e.g. 'assets/img/events/ross-livermore.jpg' (square, 800px or larger).
                   The site applies the halftone + neon treatment and adds the name, so use a plain photo.
      photoName    Name shown in neon over the photo. Defaults to the title.
@@ -68,10 +69,11 @@
       title: 'Ross Livermore',
       time: '9:30 PM to 12 AM',
       short: 'Live show. $10 at the door.',
-      description: 'Ross Livermore plays the late slot at Garage Sale Bar. Tickets are $10 at the door.',
+      description: 'Nashville singer-songwriter Ross Livermore plays soul-leaning rock and R&B, sung in a powerful tenor. Originally from Peabody, Massachusetts, he has been based in Nashville for years. Tickets are $10 at the door.',
       price: '$10 at the door',
       ticketUrl: '',
-      socialUrl: '',
+      socialUrl: 'https://www.instagram.com/rosslivermore',
+      linkLabel: 'Ross on Instagram',
       photo: 'assets/img/events/placeholder-artist.svg',   // stand-in: replace with a real photo of the artist
       photoName: 'Ross Livermore',
       tag: 'Live show',
@@ -126,7 +128,7 @@
   /* Where an event's button goes: tickets first, then the social post, then the profile */
   GSB.eventLink = function (ev) {
     if (ev.ticketUrl) return { href: ev.ticketUrl, label: 'Get tickets', kind: 'tickets' };
-    if (ev.socialUrl) return { href: ev.socialUrl, label: 'See the post', kind: 'social' };
+    if (ev.socialUrl) return { href: ev.socialUrl, label: ev.linkLabel || 'See the post', kind: 'social' };
     return { href: GSB.INSTAGRAM, label: 'See it on Instagram', kind: 'social' };
   };
 
