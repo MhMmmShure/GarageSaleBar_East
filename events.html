@@ -30,7 +30,7 @@
     </a>
     <ul class="nav__links nav__links--right">
       <li><a href="index.html#happy-hour">Happy Hour</a></li>
-      <li><a href="index.html#book">Book an Event</a></li>
+      <li><a href="book.html">Book an Event</a></li>
       <li><a href="index.html#visit">Visit</a></li>
     </ul>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
@@ -44,7 +44,7 @@
       <li><a href="index.html#menu">Menu</a></li>
       <li><a href="events.html" aria-current="page">Events</a></li>
       <li><a href="index.html#happy-hour">Happy Hour</a></li>
-      <li><a href="index.html#book">Book an Event</a></li>
+      <li><a href="book.html">Book an Event</a></li>
       <li><a href="index.html#visit">Visit</a></li>
     </ul>
   </div>
@@ -67,7 +67,7 @@
 <section class="listing torn torn--paper" aria-labelledby="listing-title">
   <div class="listing__inner">
     <header class="listing__head">
-      <h2 id="listing-title">Coming up</h2>
+      <h2 id="listing-title" class="ransom" data-ransom>Coming up</h2>
       <p id="events-count" aria-live="polite"></p>
     </header>
     <ul class="ecards" id="events-grid">
@@ -87,7 +87,7 @@
       <h2>Want the room for your own night?</h2>
       <p>Album releases, private concerts, pop-ups and parties. Tell us what you're planning.</p>
     </div>
-    <a class="btn" href="index.html#book">Book an event</a>
+    <a class="btn" href="book.html">Book an event</a>
   </div>
 </section>
 
@@ -139,11 +139,24 @@
       <li><a href="index.html#menu">Menu</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="index.html#happy-hour">Happy Hour</a></li>
-      <li><a href="index.html#book">Book an Event</a></li>
+      <li><a href="book.html">Book an Event</a></li>
       <li><a href="index.html#visit">Visit</a></li>
     </ul>
   </nav>
-  <p class="footer__sign"><span>Garage Sale Bar</span> <em>for our neighbors.</em></p>
+  <div class="footer__brand">
+    <svg class="lockup" viewBox="0 0 460 250" role="img" aria-label="Garage Sale Bar">
+      <rect x="12" y="22" width="436" height="206" rx="103" fill="#111" stroke="#ff00d6" stroke-width="9"/>
+      <rect x="27" y="37" width="406" height="176" rx="88" fill="none" stroke="#00e5ff" stroke-width="7"/>
+      <rect x="41" y="51" width="378" height="148" rx="74" fill="none" stroke="#a6ff00" stroke-width="6"/>
+      <g transform="rotate(-4 230 125)" class="lockup__text">
+        <text x="226" y="118" text-anchor="middle">GARAGE</text>
+        <text x="232" y="174" text-anchor="middle">SALE BAR</text>
+      </g>
+      <path d="M398 6 Q398 46 438 46 Q398 46 398 86 Q398 46 358 46 Q398 46 398 6Z" fill="#a6ff00"/>
+      <path d="M352 96 l7 9 -7 9 -7 -9z" fill="#f0e5d0"/>
+    </svg>
+    <p class="footer__sign"><em>for our neighbors.</em></p>
+  </div>
   <p class="footer__legal">© <span id="year">2026</span> Garage Sale Bar. Please drink responsibly.</p>
 </footer>
 

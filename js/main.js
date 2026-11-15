@@ -6,6 +6,30 @@
   var nav = document.getElementById('top-nav');
   var toTop = document.querySelector('.to-top');
 
+  /* ---------- Magazine-cutout headings: <h2 class="ransom" data-ransom>Text</h2> ---------- */
+  [].forEach.call(document.querySelectorAll('[data-ransom]'), function (node) {
+    var text = node.textContent.replace(/\s+/g, ' ').trim();
+    if (!text) return;
+    node.setAttribute('aria-label', text);
+    node.textContent = '';
+    var n = 0;
+    text.split(' ').forEach(function (word) {
+      var w = document.createElement('span');
+      w.className = 'ransom__w';
+      w.setAttribute('aria-hidden', 'true');
+      word.split('').forEach(function (ch) {
+        var l = document.createElement('span');
+        l.className = 'ransom__l r' + (n % 9) + (/[.,!?'’]/.test(ch) ? ' ransom__p' : '');
+        l.textContent = ch;
+        w.appendChild(l);
+        n++;
+      });
+      node.appendChild(w);
+      n++;
+    });
+    node.classList.add('is-cut');
+  });
+
   /* ---------- Mobile menu ---------- */
   var toggle = document.querySelector('.nav__toggle');
   var mobileMenu = document.getElementById('mobile-menu');
@@ -127,6 +151,7 @@
   /* ---------- Forms (Netlify Forms, submitted in place) ---------- */
   var MESSAGES = {
     booking: 'Booking request sent. We\'ll reply by email.',
+    'booking-note': 'Note sent. We\'ll reply by email.',
     newsletter: 'Subscribed. See you at the next one.'
   };
   [].forEach.call(document.querySelectorAll('form[data-ajax]'), function (form) {

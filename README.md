@@ -7,6 +7,7 @@ No build step: plain HTML, CSS and JavaScript.
 
 - `index.html` — home page (hero, vintage, bar, happy hour, menu, short events list, booking, map, footer)
 - `vintage.html` — vintage page (mission, what's on the racks, vendor application)
+- `book.html` — private events page with the fill-in-the-blanks booking note
 - `events.html` — full events listing with thumbnails, descriptions and ticket/social links
 - `js/events-data.js` — the event data both pages are built from
 - `css/styles.css` — styles; brand colors and fonts are CSS variables at the top
@@ -24,9 +25,15 @@ No build step: plain HTML, CSS and JavaScript.
 
 ## Forms
 
-The booking and newsletter forms use Netlify Forms (`data-netlify="true"`).
+The booking form (home), booking note (book.html) and newsletter forms use Netlify Forms (`data-netlify="true"`).
 They start collecting submissions once the site is deployed on Netlify with form detection enabled.
 
 ## Preview locally
 
     python3 -m http.server 8000
+
+## Brand components
+
+- **Cutout headings**: add `class="ransom" data-ransom` to any heading and the letters are cut out automatically.
+- **Alternate lockup**: the `<svg class="lockup">` block (see any footer).
+- **Eyes, lips, collage banner**: `assets/img/eye-*.webp`, `eyes-strip.webp`, `lips.webp`, `collage-banner.webp`.

@@ -59,7 +59,7 @@
     </a>
     <ul class="nav__links nav__links--right">
       <li><a href="#happy-hour">Happy Hour</a></li>
-      <li><a href="#book">Book an Event</a></li>
+      <li><a href="book.html">Book an Event</a></li>
       <li><a href="#visit">Visit</a></li>
     </ul>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
@@ -73,7 +73,7 @@
       <li><a href="#menu">Menu</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="#happy-hour">Happy Hour</a></li>
-      <li><a href="#book">Book an Event</a></li>
+      <li><a href="book.html">Book an Event</a></li>
       <li><a href="#visit">Visit</a></li>
     </ul>
   </div>
@@ -136,7 +136,7 @@
       <h2 class="neon neon--pink">Live music</h2>
       <p class="feature__kicker">A small room that gets loud.</p>
       <p>Songwriter rounds on Mondays, karaoke on Tuesdays and touring bands on the late slot. There is always something on.</p>
-      <a class="btn" href="#events">View upcoming events</a>
+      <a class="btn" href="events.html">View upcoming events</a>
     </div>
   </div>
 </section>
@@ -203,7 +203,7 @@
 <section class="menu torn torn--paper" id="menu">
   <div class="menu__inner">
     <header class="menu__head">
-      <h2>The menu</h2>
+      <h2 class="ransom" data-ransom>The menu</h2>
       <p>Prices and items change with the season. Ask your bartender what's new.</p>
     </header>
     <div class="menu__cols">
@@ -273,6 +273,7 @@
 <section class="events" id="events">
   <div class="events__inner">
     <header class="events__head">
+      <img class="eyes-strip" src="assets/img/eyes-strip.webp" width="1148" height="172" alt="" loading="lazy">
       <h2>Coming up</h2>
       <p>The next few nights at Garage Sale. Late shows and one-off events are announced on Instagram first.</p>
       <div class="events__actions">
@@ -297,11 +298,12 @@
 <section class="book torn torn--pink" id="book">
   <div class="book__inner">
     <div class="book__copy">
+      <img class="book__lips" src="assets/img/lips.webp" width="530" height="362" alt="" loading="lazy">
       <h2>Your party. Our place.</h2>
       <p class="book__hand">Big energy. Intimate setting.</p>
       <p>Rent the room for birthdays, corporate gatherings, album releases, private concerts, pop-ups and brand activations.</p>
       <p>We've hosted Sabrina Carpenter merch pop-ups, activations with Red Bull, Square and Cash App, and an intimate Medium Build show.</p>
-      <p>Tell us what you're planning and we'll reply by email.</p>
+      <p>Tell us what you're planning and we'll reply by email. <a href="book.html">More about private events</a></p>
     </div>
     <form class="form" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-ajax>
       <input type="hidden" name="form-name" value="booking">
@@ -328,6 +330,13 @@
     </form>
   </div>
 </section>
+
+<div class="banner" aria-hidden="true">
+  <picture>
+    <source media="(max-width: 700px)" srcset="assets/img/collage-banner-1200.webp">
+    <img src="assets/img/collage-banner.webp" width="2302" height="508" alt="" loading="lazy">
+  </picture>
+</div>
 
 <!-- MAP -->
 <section class="map" id="visit" aria-label="Map and directions">
@@ -384,11 +393,24 @@
       <li><a href="index.html#menu">Menu</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="index.html#happy-hour">Happy Hour</a></li>
-      <li><a href="index.html#book">Book an Event</a></li>
+      <li><a href="book.html">Book an Event</a></li>
       <li><a href="index.html#visit">Visit</a></li>
     </ul>
   </nav>
-  <p class="footer__sign"><span>Garage Sale Bar</span> <em>for our neighbors.</em></p>
+  <div class="footer__brand">
+    <svg class="lockup" viewBox="0 0 460 250" role="img" aria-label="Garage Sale Bar">
+      <rect x="12" y="22" width="436" height="206" rx="103" fill="#111" stroke="#ff00d6" stroke-width="9"/>
+      <rect x="27" y="37" width="406" height="176" rx="88" fill="none" stroke="#00e5ff" stroke-width="7"/>
+      <rect x="41" y="51" width="378" height="148" rx="74" fill="none" stroke="#a6ff00" stroke-width="6"/>
+      <g transform="rotate(-4 230 125)" class="lockup__text">
+        <text x="226" y="118" text-anchor="middle">GARAGE</text>
+        <text x="232" y="174" text-anchor="middle">SALE BAR</text>
+      </g>
+      <path d="M398 6 Q398 46 438 46 Q398 46 398 86 Q398 46 358 46 Q398 46 398 6Z" fill="#a6ff00"/>
+      <path d="M352 96 l7 9 -7 9 -7 -9z" fill="#f0e5d0"/>
+    </svg>
+    <p class="footer__sign"><em>for our neighbors.</em></p>
+  </div>
   <p class="footer__legal">© <span id="year">2026</span> Garage Sale Bar. Please drink responsibly.</p>
 </footer>
 
