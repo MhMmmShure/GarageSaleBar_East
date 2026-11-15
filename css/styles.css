@@ -905,12 +905,10 @@ ul, ol { padding: 0; list-style: none; }
 .vendors__inner { position: relative; }
 .deco--rack { right: 0; bottom: clamp(-96px, -7vw, -40px); width: clamp(220px, 30vw, 400px); transform: rotate(-4deg); filter: drop-shadow(7px 8px 0 rgba(0, 0, 0, .55)); }
 .vendors { padding-bottom: clamp(110px, 13vw, 190px); }
-.events__lamp { width: clamp(110px, 12vw, 170px); height: auto; transform: rotate(-7deg); margin-top: 10px; filter: drop-shadow(0 0 18px rgba(255, 0, 214, .55)); }
 
 @media (max-width: 900px) {
   .happy__inner { grid-template-columns: 1fr; }
   .happy__art { width: min(78%, 320px); justify-self: center; margin-top: 8px; }
-  .events__lamp { display: none; }
   .deco--flower-br { width: 38vw; }
   .deco--skyline-bl { width: 50vw; }
   .menu { padding-bottom: 150px; }
