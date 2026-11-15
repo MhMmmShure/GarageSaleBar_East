@@ -1,6 +1,8 @@
 /* Garage Sale Bar — event data
-   This is the only file to edit when events change. Both the home page (short list)
-   and events.html (full listing) are built from it.
+   This is the only file to edit when events change.
+   After editing, run:  node tools/prerender-events.js
+   That writes the listings and their search-engine data into calendar.html itself. Both the home page (short list)
+   and calendar.html (full listing) are built from it.
 
    Fields
      title        Event name
@@ -20,6 +22,8 @@
      tag          Optional small sticker on the photo, e.g. 'Live show'.
      image        Optional finished poster, shown exactly as supplied (square works best).
                   Order of use: image, then photo, then a flyer drawn from `flyer`.
+     startTime    24-hour start, e.g. '21:30'. endTime is optional. Used for search-engine event data.
+     priceUSD     Optional number, e.g. 10. Used for search-engine event data.
      flyer        { style: 'paper' | 'pink' | 'blue' | 'green' | 'neon', big: 'BIG WORDS', hand: 'small words' }
 
    Writing guide for event cards (every card has the same rows, so they line up)
@@ -41,6 +45,7 @@
       day: 1,
       title: "Nashville Tour Stop Writers' Round",
       time: '7 to 10 PM',
+      startTime: '19:00', endTime: '22:00',
       short: 'Local songwriters in the round, hosted by Nashville Tour Stop.',
       description: 'Nashville songwriters take turns playing their own songs in the round. Hosted every Monday by Nashville Tour Stop.',
       price: '',
@@ -53,6 +58,7 @@
       day: 2,
       title: 'Karaoke Tuesdays',
       time: 'From 8 PM',
+      startTime: '20:00',
       short: 'Hosted by Sma.',
       description: 'Pick a song and take the mic. Karaoke runs every Tuesday from 8 PM, with Sma hosting.',
       price: '',
@@ -68,6 +74,7 @@
       date: '2026-11-20',
       title: 'Ross Livermore',
       time: '9:30 PM to 12 AM',
+      startTime: '21:30', endTime: '00:00', priceUSD: 10,
       short: 'Live show. $10 at the door.',
       description: 'Nashville singer-songwriter Ross Livermore plays soul-leaning rock and R&B, sung in a powerful tenor. Originally from Peabody, Massachusetts, he has been based in Nashville for years. Tickets are $10 at the door.',
       price: '$10 at the door',

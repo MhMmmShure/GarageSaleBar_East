@@ -8,7 +8,7 @@ No build step: plain HTML, CSS and JavaScript.
 - `index.html` — home page (hero, vintage, bar, happy hour, menu, short events list, booking, map, footer)
 - `vintage.html` — vintage page (mission, what's on the racks, vendor application)
 - `book.html` — private events page with the fill-in-the-blanks booking note
-- `events.html` — full events listing with thumbnails, descriptions and ticket/social links
+- `calendar.html` — full events listing with thumbnails, descriptions and ticket/social links
 - `js/events-data.js` — the event data both pages are built from
 - `css/styles.css` — styles; brand colors and fonts are CSS variables at the top
 - `js/main.js` — scroll effects, today's hours, upcoming events, form submission
@@ -22,6 +22,16 @@ No build step: plain HTML, CSS and JavaScript.
   ticket link, or its social post if there are no tickets. Put poster images in `assets/img/events/`.
 - **Header / footer**: these are repeated in each `.html` file, so change them in every page.
 - **Hours**: update the footer table in `index.html` and `HOURS` in `js/main.js`.
+
+## After changing events
+
+Run `node tools/prerender-events.js`. It reads `js/events-data.js` and writes the listings and their
+event data into `calendar.html`, so search and answer engines can read them without running scripts.
+
+## Search files
+
+- `robots.txt`, `sitemap.xml`, `_redirects` (old Squarespace addresses) and `404.html`.
+- Canonical and share tags assume the site lives at https://www.garagesalebar.com.
 
 ## Forms
 

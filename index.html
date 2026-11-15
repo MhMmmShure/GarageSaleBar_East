@@ -3,44 +3,466 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Garage Sale Bar | East Nashville Vintage, Live Music &amp; Happy Hour</title>
-<meta name="description" content="Garage Sale Bar is an East Nashville neighborhood bar and vintage shop. Live music, karaoke, pool, darts, hot dogs, cocktails and happy hour Monday to Friday, 3 to 6 PM.">
+<title>Garage Sale Bar | East Nashville Bar, Vintage &amp; Live Music</title>
+<meta name="description" content="Garage Sale Bar is an East Nashville bar and vintage shop with live music, karaoke, pool, darts, hot dogs and cocktails. Happy hour Monday to Friday, 3 to 6 PM.">
 <meta name="theme-color" content="#111111">
-<meta property="og:title" content="Garage Sale Bar | Thrift. Sip. Dance. Repeat.">
-<meta property="og:description" content="East Nashville vintage shop and bar. Live music, karaoke, pool, darts, cocktails and happy hour.">
-<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:title" content="Garage Sale Bar | East Nashville Bar, Vintage &amp; Live Music">
+<meta property="og:description" content="Garage Sale Bar is an East Nashville bar and vintage shop with live music, karaoke, pool, darts, hot dogs and cocktails. Happy hour Monday to Friday, 3 to 6 PM.">
+<meta property="og:url" content="https://www.garagesalebar.com/">
+<meta property="og:site_name" content="Garage Sale Bar">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.garagesalebar.com/assets/img/og-image.jpg">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://www.garagesalebar.com/">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/archivo-black-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/styles.css?v=16">
+<link rel="stylesheet" href="css/styles.css?v=17">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BarOrPub",
-  "name": "Garage Sale Bar",
-  "url": "https://www.garagesalebar.com",
-  "telephone": "+1-615-760-5944",
-  "email": "howdy@garagesalevintage.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "747 Douglas Ave, Suite 101A",
-    "addressLocality": "Nashville",
-    "addressRegion": "TN",
-    "postalCode": "37207",
-    "addressCountry": "US"
+ "@context": "https://schema.org",
+ "@type": "BarOrPub",
+ "@id": "https://www.garagesalebar.com/#business",
+ "name": "Garage Sale Bar",
+ "description": "East Nashville bar and vintage shop with live music, karaoke, pool and darts. The East Nashville location of Garage Sale Vintage.",
+ "url": "https://www.garagesalebar.com/",
+ "image": "https://www.garagesalebar.com/assets/img/og-image.jpg",
+ "telephone": "+1-615-760-5944",
+ "email": "howdy@garagesalevintage.com",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "747 Douglas Ave, Suite 101A",
+  "addressLocality": "Nashville",
+  "addressRegion": "TN",
+  "postalCode": "37207",
+  "addressCountry": "US"
+ },
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday"
+   ],
+   "opens": "11:00",
+   "closes": "00:00"
   },
-  "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "00:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "02:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "02:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "00:00"}
-  ],
-  "sameAs": [
-    "https://www.instagram.com/garagesalebar/",
-    "https://www.tiktok.com/@garagesalebar_east",
-    "https://www.facebook.com/profile.php?id=100094465976194"
-  ]
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Friday",
+   "opens": "11:00",
+   "closes": "02:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Saturday",
+   "opens": "10:00",
+   "closes": "02:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Sunday",
+   "opens": "10:00",
+   "closes": "00:00"
+  }
+ ],
+ "parentOrganization": {
+  "@type": "Organization",
+  "name": "Garage Sale Vintage"
+ },
+ "hasMenu": "https://www.garagesalebar.com/#menu",
+ "sameAs": [
+  "https://www.instagram.com/garagesalebar/",
+  "https://www.tiktok.com/@garagesalebar_east",
+  "https://www.facebook.com/profile.php?id=100094465976194"
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Menu",
+ "@id": "https://www.garagesalebar.com/#menu",
+ "name": "Garage Sale Bar menu",
+ "hasMenuSection": [
+  {
+   "@type": "MenuSection",
+   "name": "Hot dogs",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Classic Style",
+     "description": "Ketchup and mustard",
+     "offers": {
+      "@type": "Offer",
+      "price": "5.95",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Chili Style",
+     "description": "Brisket burnt end chili, queso, jalapeño, crushed chips",
+     "offers": {
+      "@type": "Offer",
+      "price": "6.95",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Nashville Style",
+     "description": "Bacon scallion schmear, pickled onion, jalapeño, chipotle crema",
+     "offers": {
+      "@type": "Offer",
+      "price": "6.95",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Korean Style",
+     "description": "Korean BBQ sauce, white kimchi, sesame seeds",
+     "offers": {
+      "@type": "Offer",
+      "price": "6.95",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Sabrette Style",
+     "description": "Onions in sauce",
+     "offers": {
+      "@type": "Offer",
+      "price": "6.95",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Miss Vickie's Chips",
+     "offers": {
+      "@type": "Offer",
+      "price": "3",
+      "priceCurrency": "USD"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "Shots for the table",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Shot Ski",
+     "description": "Four shots served on a ski",
+     "offers": {
+      "@type": "Offer",
+      "price": "30",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Infusion Shots",
+     "offers": {
+      "@type": "Offer",
+      "price": "30",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Mixed Shots",
+     "offers": {
+      "@type": "Offer",
+      "price": "50",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Jello Shots",
+     "offers": {
+      "@type": "Offer",
+      "price": "6",
+      "priceCurrency": "USD"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "Cocktails",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "House Margarita",
+     "description": "Well blanco, lime, triple sec, simple syrup",
+     "offers": {
+      "@type": "Offer",
+      "price": "12",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Classic Margarita",
+     "description": "Espolòn blanco, lime, triple sec, simple syrup",
+     "offers": {
+      "@type": "Offer",
+      "price": "14",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Spicy Saddle",
+     "description": "Classic margarita with house-infused jalapeño pineapple tequila",
+     "offers": {
+      "@type": "Offer",
+      "price": "12",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Strawberry Stamp",
+     "description": "Classic margarita with house-infused strawberry tequila",
+     "offers": {
+      "@type": "Offer",
+      "price": "12",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Watermelon Cooler",
+     "description": "Classic margarita with house-infused watermelon tequila",
+     "offers": {
+      "@type": "Offer",
+      "price": "12",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Cowboy Mule",
+     "description": "Your choice of well vodka, whiskey or tequila",
+     "offers": {
+      "@type": "Offer",
+      "price": "12",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Soul Train",
+     "description": "Bourbon, bitters, simple syrup",
+     "offers": {
+      "@type": "Offer",
+      "price": "15",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Wanted: Espresso Martini",
+     "description": "Vodka, cold brew, vanilla",
+     "offers": {
+      "@type": "Offer",
+      "price": "15",
+      "priceCurrency": "USD"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "House infusions",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Super Freak",
+     "description": "Strawberry vodka",
+     "offers": {
+      "@type": "Offer",
+      "price": "8",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Ring of Fire",
+     "description": "Jalapeño pineapple tequila",
+     "offers": {
+      "@type": "Offer",
+      "price": "8",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Danger Zone",
+     "description": "Pickle vodka",
+     "offers": {
+      "@type": "Offer",
+      "price": "8",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "La Bamba",
+     "description": "Watermelon tequila",
+     "offers": {
+      "@type": "Offer",
+      "price": "8",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Sin City",
+     "description": "Strawberry tequila",
+     "offers": {
+      "@type": "Offer",
+      "price": "8",
+      "priceCurrency": "USD"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "Zero proof",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Naperol Spritz",
+     "description": "Lyre's Italian orange, Lyre's Classico N/A wine, soda water",
+     "offers": {
+      "@type": "Offer",
+      "price": "10",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "NA Spicy Marg",
+     "offers": {
+      "@type": "Offer",
+      "price": "10",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Michelada",
+     "description": "Bloody mix, Electrolime, Best Day Brewing N/A beer",
+     "offers": {
+      "@type": "Offer",
+      "price": "10",
+      "priceCurrency": "USD"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Best Day Brewing",
+     "description": "Electrolime, hazy IPA or kölsch",
+     "offers": {
+      "@type": "Offer",
+      "price": "6",
+      "priceCurrency": "USD"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is Garage Sale Bar?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Garage Sale Bar is an East Nashville bar and vintage shop with live music, karaoke, pool and darts. It is the new East Nashville location for Garage Sale Vintage."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Where is Garage Sale Bar?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "747 Douglas Ave, Suite 101A, Nashville, TN 37207, in East Nashville."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are Garage Sale Bar's hours?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Monday to Thursday, 11 AM to 12 AM. Friday, 11 AM to 2 AM. Saturday, 10 AM to 2 AM. Sunday, 10 AM to 12 AM."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When is happy hour?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Monday to Friday, 3 to 6 PM, with half off food and $8 beer and shot specials."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is Garage Sale Bar part of Garage Sale Vintage?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. This is the new East Nashville location for Garage Sale Vintage, which has additional locations in Nashville (Broadway) and Denver."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there live music or karaoke?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Nashville Tour Stop hosts a writers' round every Monday from 7 to 10 PM, karaoke runs every Tuesday from 8 PM, and bands play late shows."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What food and drinks are served?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Hot dogs in five styles, margaritas made with house-infused tequila, cocktails, and non-alcoholic cocktails and beer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I rent Garage Sale Bar for a private event?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. The room is available for birthdays, corporate gatherings, live shows, pop-ups and brand activations."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I sell vintage at Garage Sale Bar?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Vintage collectors, independent sellers, artists and emerging brands can apply to be a vendor."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -52,7 +474,7 @@
     <ul class="nav__links nav__links--left">
       <li><a href="vintage.html">Vintage</a></li>
       <li><a href="#menu">Menu</a></li>
-      <li><a href="events.html">Calendar</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
     </ul>
     <a class="nav__brand" href="#top" aria-label="Garage Sale Bar, back to top">
       <span class="nav__g">Garage</span><span class="nav__s">Sale</span><em>Bar</em>
@@ -71,7 +493,7 @@
     <ul>
       <li><a href="vintage.html">Vintage</a></li>
       <li><a href="#menu">Menu</a></li>
-      <li><a href="events.html">Calendar</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
       <li><a href="#happy-hour">Happy Hour</a></li>
       <li><a href="book.html">Book an Event</a></li>
       <li><a href="#visit">Visit</a></li>
@@ -120,7 +542,7 @@
       <h2>Live music and games</h2>
       <p class="strip__hand">Questionable pool skills welcome.</p>
       <p>Writers' rounds, karaoke and late shows, plus pool and darts any night of the week.</p>
-      <a class="btn" href="events.html">See what's on</a>
+      <a class="btn" href="calendar.html">See what's on</a>
     </article>
   </div>
 </section>
@@ -136,7 +558,7 @@
       <h2 class="neon neon--pink">Live music</h2>
       <p class="feature__kicker">A small room that gets loud.</p>
       <p>Songwriter rounds on Mondays, karaoke on Tuesdays and touring bands on the late slot. There is always something on.</p>
-      <a class="btn" href="events.html">View upcoming events</a>
+      <a class="btn" href="calendar.html">View upcoming events</a>
     </div>
   </div>
 </section>
@@ -268,7 +690,7 @@
           </dl>
         </section>
         <section class="menu__group">
-          <h3>Zero proof</h3>
+          <h3>Zero proof <small>non-alcoholic</small></h3>
           <dl>
             <div><dt>Naperol Spritz <span>$10</span></dt><dd>Lyre's Italian orange, Lyre's Classico N/A wine, soda water</dd></div>
             <div><dt>NA Spicy Marg <span>$10</span></dt></div>
@@ -289,7 +711,7 @@
       <h2>Coming up</h2>
       <p>The next few nights at Garage Sale. Late shows and one-off events are announced on Instagram first.</p>
       <div class="events__actions">
-        <a class="btn" href="events.html">See all events</a>
+        <a class="btn" href="calendar.html">See all events</a>
         <a class="btn btn--blue" href="https://www.instagram.com/garagesalebar/" target="_blank" rel="noopener">Follow @garagesalebar</a>
       </div>
     </header>
@@ -351,6 +773,51 @@
   </picture>
 </div>
 
+<!-- FAQ -->
+<section class="faq torn torn--paper" id="faq" aria-labelledby="faq-title">
+  <div class="faq__inner">
+    <h2 class="ransom faq__title" id="faq-title" data-ransom>Good to know</h2>
+    <div class="faq__grid">
+      <div class="faq__item">
+        <h3>What is Garage Sale Bar?</h3>
+        <p>Garage Sale Bar is an East Nashville bar and vintage shop with live music, karaoke, pool and darts. It is the new East Nashville location for Garage Sale Vintage.</p>
+      </div>
+      <div class="faq__item">
+        <h3>Where is Garage Sale Bar?</h3>
+        <p>747 Douglas Ave, Suite 101A, Nashville, TN 37207, in East Nashville.</p>
+      </div>
+      <div class="faq__item">
+        <h3>What are Garage Sale Bar's hours?</h3>
+        <p>Monday to Thursday, 11 AM to 12 AM. Friday, 11 AM to 2 AM. Saturday, 10 AM to 2 AM. Sunday, 10 AM to 12 AM.</p>
+      </div>
+      <div class="faq__item">
+        <h3>When is happy hour?</h3>
+        <p>Monday to Friday, 3 to 6 PM, with half off food and $8 beer and shot specials.</p>
+      </div>
+      <div class="faq__item">
+        <h3>Is Garage Sale Bar part of Garage Sale Vintage?</h3>
+        <p>Yes. This is the new East Nashville location for Garage Sale Vintage, which has additional locations in Nashville (Broadway) and Denver.</p>
+      </div>
+      <div class="faq__item">
+        <h3>Is there live music or karaoke?</h3>
+        <p>Yes. Nashville Tour Stop hosts a writers' round every Monday from 7 to 10 PM, karaoke runs every Tuesday from 8 PM, and bands play late shows. <a href="calendar.html">See the calendar</a>.</p>
+      </div>
+      <div class="faq__item">
+        <h3>What food and drinks are served?</h3>
+        <p>Hot dogs in five styles, margaritas made with house-infused tequila, cocktails, and non-alcoholic cocktails and beer. <a href="#menu">See the menu</a>.</p>
+      </div>
+      <div class="faq__item">
+        <h3>Can I rent Garage Sale Bar for a private event?</h3>
+        <p>Yes. The room is available for birthdays, corporate gatherings, live shows, pop-ups and brand activations. <a href="book.html">Send a booking request</a>.</p>
+      </div>
+      <div class="faq__item">
+        <h3>Can I sell vintage at Garage Sale Bar?</h3>
+        <p>Yes. Vintage collectors, independent sellers, artists and emerging brands can apply to be a vendor. <a href="https://docs.google.com/forms/d/e/1FAIpQLSel0c3rFbMv7X3Ah1KHVkPsn_nrGVXcLn4D0Khr66hKhy_gQQ/viewform" target="_blank" rel="noopener">Apply to be a vendor</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MAP -->
 <section class="map" id="visit" aria-label="Map and directions">
   <iframe title="Map showing Garage Sale Bar at 747 Douglas Ave, Nashville" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -404,7 +871,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="vintage.html">Vintage</a></li>
       <li><a href="index.html#menu">Menu</a></li>
-      <li><a href="events.html">Calendar</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
       <li><a href="index.html#happy-hour">Happy Hour</a></li>
       <li><a href="book.html">Book an Event</a></li>
       <li><a href="index.html#visit">Visit</a></li>
@@ -429,7 +896,7 @@
 
 <a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 
-<script src="js/events-data.js?v=16" defer></script>
-<script src="js/main.js?v=16" defer></script>
+<script src="js/events-data.js?v=17" defer></script>
+<script src="js/main.js?v=17" defer></script>
 </body>
 </html>
