@@ -52,7 +52,7 @@
     <ul class="nav__links nav__links--left">
       <li><a href="#vintage">Vintage</a></li>
       <li><a href="#menu">Menu</a></li>
-      <li><a href="#events">Events</a></li>
+      <li><a href="events.html">Events</a></li>
     </ul>
     <a class="nav__brand" href="#top" aria-label="Garage Sale Bar, back to top">
       <span>Garage Sale</span><em>Bar</em>
@@ -71,7 +71,7 @@
     <ul>
       <li><a href="#vintage">Vintage</a></li>
       <li><a href="#menu">Menu</a></li>
-      <li><a href="#events">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="#happy-hour">Happy Hour</a></li>
       <li><a href="#book">Book an Event</a></li>
       <li><a href="#visit">Visit</a></li>
@@ -120,7 +120,7 @@
       <h2>Live music and games</h2>
       <p class="strip__hand">Questionable pool skills welcome.</p>
       <p>Writers' rounds, karaoke and late shows, plus pool and darts any night of the week.</p>
-      <a class="btn" href="#events">See what's on</a>
+      <a class="btn" href="events.html">See what's on</a>
     </article>
   </div>
 </section>
@@ -271,8 +271,11 @@
   <div class="events__inner">
     <header class="events__head">
       <h2>Coming up</h2>
-      <p>Weekly nights are free to walk in. Late shows and one-off events are announced on Instagram first.</p>
-      <a class="btn btn--blue" href="https://www.instagram.com/garagesalebar/" target="_blank" rel="noopener">Follow @garagesalebar</a>
+      <p>The next few nights at Garage Sale. Late shows and one-off events are announced on Instagram first.</p>
+      <div class="events__actions">
+        <a class="btn" href="events.html">See all events</a>
+        <a class="btn btn--blue" href="https://www.instagram.com/garagesalebar/" target="_blank" rel="noopener">Follow @garagesalebar</a>
+      </div>
     </header>
     <ol class="events__list" id="events-list">
       <li class="event">
@@ -371,12 +374,24 @@
       </ul>
     </section>
   </div>
+  <nav class="footer__nav" aria-label="Footer">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#vintage">Vintage</a></li>
+      <li><a href="index.html#menu">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="index.html#happy-hour">Happy Hour</a></li>
+      <li><a href="index.html#book">Book an Event</a></li>
+      <li><a href="index.html#visit">Visit</a></li>
+    </ul>
+  </nav>
   <p class="footer__sign"><span>Garage Sale Bar</span> <em>for our neighbors.</em></p>
   <p class="footer__legal">© <span id="year">2026</span> Garage Sale Bar. Please drink responsibly.</p>
 </footer>
 
 <a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 
+<script src="js/events-data.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>

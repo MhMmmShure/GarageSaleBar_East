@@ -13,10 +13,10 @@
     toggle.setAttribute('aria-expanded', String(open));
     mobileMenu.hidden = !open;
   }
-  toggle.addEventListener('click', function () {
+  if (toggle) toggle.addEventListener('click', function () {
     setMenu(toggle.getAttribute('aria-expanded') !== 'true');
   });
-  mobileMenu.addEventListener('click', function (e) {
+  if (mobileMenu) mobileMenu.addEventListener('click', function (e) {
     if (e.target.closest('a')) setMenu(false);
   });
   document.addEventListener('keydown', function (e) {
@@ -42,7 +42,7 @@
     var vh = window.innerHeight;
 
     nav.classList.toggle('is-scrolled', y > 40);
-    toTop.classList.toggle('is-visible', y > vh * 0.8);
+    if (toTop) toTop.classList.toggle('is-visible', y > vh * 0.8);
 
     if (reduceMotion) return;
 
@@ -82,20 +82,8 @@
     0: ['10 AM', 'midnight'], 1: ['11 AM', 'midnight'], 2: ['11 AM', 'midnight'],
     3: ['11 AM', 'midnight'], 4: ['11 AM', 'midnight'], 5: ['11 AM', '2 AM'], 6: ['10 AM', '2 AM']
   };
-  function nashvilleNow() {
-    try {
-      var parts = new Intl.DateTimeFormat('en-US', {
-        timeZone: 'America/Chicago', year: 'numeric', month: 'numeric', day: 'numeric'
-      }).formatToParts(new Date());
-      var o = {};
-      parts.forEach(function (p) { o[p.type] = p.value; });
-      return new Date(+o.year, +o.month - 1, +o.day);
-    } catch (e) {
-      var d = new Date();
-      return new Date(d.getFullYear(), d.getMonth(), d.getDate());
-    }
-  }
-  var today = nashvilleNow();
+  var GSB = window.GSB || {};
+  var today = GSB.today ? GSB.today() : new Date();
   var dow = today.getDay();
   var openEl = document.getElementById('open-today');
   if (openEl) openEl.textContent = 'Open today ' + HOURS[dow][0] + ' to ' + HOURS[dow][1] + '.';
@@ -105,34 +93,10 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = today.getFullYear();
 
-  /* ---------- Upcoming events, generated from the weekly schedule ----------
-     To add a one-off show, add an entry to ONE_OFFS (date as YYYY-MM-DD).
-     To change the weekly nights, edit WEEKLY (day: 0 = Sunday ... 6 = Saturday). */
-  var WEEKLY = [
-    { day: 1, title: "Nashville Tour Stop Writers' Round", info: '7 to 10 PM. Local songwriters in the round, hosted by Nashville Tour Stop.' },
-    { day: 2, title: 'Karaoke Tuesdays', info: 'From 8 PM. Hosted by Sma.' }
-  ];
-  var ONE_OFFS = [
-    // { date: '2026-12-31', title: 'New Year\'s Eve', info: 'Doors 9 PM.' }
-  ];
-  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  /* ---------- Home page: short list of upcoming events (data in js/events-data.js) ---------- */
   var list = document.getElementById('events-list');
-  if (list) {
-    var upcoming = [];
-    for (var i = 0; i < 28; i++) {
-      var d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
-      WEEKLY.forEach(function (w) {
-        if (w.day === d.getDay()) upcoming.push({ date: d, title: w.title, info: w.info });
-      });
-    }
-    ONE_OFFS.forEach(function (o) {
-      var p = o.date.split('-');
-      var od = new Date(+p[0], +p[1] - 1, +p[2]);
-      if (od >= today) upcoming.push({ date: od, title: o.title, info: o.info });
-    });
-    upcoming.sort(function (a, b) { return a.date - b.date; });
-    upcoming = upcoming.slice(0, 6);
+  if (list && GSB.upcoming) {
+    var upcoming = GSB.upcoming(28).slice(0, 4);
     if (upcoming.length) {
       list.innerHTML = '';
       upcoming.forEach(function (ev) {
@@ -143,14 +107,14 @@
         var b = document.createElement('b');
         b.textContent = ev.date.getDate();
         var s = document.createElement('span');
-        s.textContent = DAYS[ev.date.getDay()] + ' ' + MONTHS[ev.date.getMonth()];
+        s.textContent = GSB.DAYS[ev.date.getDay()] + ' ' + GSB.MONTHS[ev.date.getMonth()];
         date.appendChild(b); date.appendChild(s);
         var body = document.createElement('div');
         body.className = 'event__body';
         var h = document.createElement('h3');
         h.textContent = ev.title;
         var p = document.createElement('p');
-        p.textContent = ev.info;
+        p.textContent = [ev.time, ev.short].filter(Boolean).join('. ');
         body.appendChild(h); body.appendChild(p);
         li.appendChild(date); li.appendChild(body);
         list.appendChild(li);
