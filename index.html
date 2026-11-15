@@ -55,7 +55,7 @@
       <li><a href="events.html">Events</a></li>
     </ul>
     <a class="nav__brand" href="#top" aria-label="Garage Sale Bar, back to top">
-      <span>Garage Sale</span><em>Bar</em>
+      <span class="nav__g">Garage</span><span class="nav__s">Sale</span><em>Bar</em>
     </a>
     <ul class="nav__links nav__links--right">
       <li><a href="#happy-hour">Happy Hour</a></li>
@@ -189,18 +189,26 @@
 <!-- HAPPY HOUR -->
 <section class="happy torn torn--green" id="happy-hour">
   <div class="happy__inner">
-    <p class="happy__when">Happy hour, Monday to Friday, 3 to 6 PM</p>
-    <h2 class="happy__head">Half-off food. Cheap drinks. No excuses.</h2>
-    <ul class="happy__deals">
-      <li><strong>½ off</strong> all food</li>
-      <li><strong>$8</strong> beer and a shot</li>
-    </ul>
-    <p class="happy__foot">Clock out and pull up. Come for the deals, stay for the pool, darts and live music.</p>
+    <div class="happy__text">
+      <p class="happy__when">Happy hour, Monday to Friday, 3 to 6 PM</p>
+      <h2 class="happy__head">Half-off food. Cheap drinks. No excuses.</h2>
+      <ul class="happy__deals">
+        <li><strong>½ off</strong> all food</li>
+        <li><strong>$8</strong> beer and a shot</li>
+      </ul>
+      <p class="happy__foot">Clock out and pull up. Come for the deals, stay for the pool, darts and live music.</p>
+    </div>
+    <div class="happy__art" aria-hidden="true">
+      <img class="happy__tv" src="assets/img/cut-tv.webp" width="424" height="228" alt="" loading="lazy">
+      <img class="happy__glass" src="assets/img/martini.svg" width="300" height="400" alt="" loading="lazy">
+      <span class="happy__burst"><b>3–6</b><i>Mon to Fri</i></span>
+    </div>
   </div>
 </section>
 
 <!-- MENU -->
 <section class="menu torn torn--paper" id="menu">
+  <img class="deco deco--flower-br" src="assets/img/cut-flower.webp" width="464" height="290" alt="" loading="lazy">
   <div class="menu__inner">
     <header class="menu__head">
       <h2 class="ransom" data-ransom>The menu</h2>
@@ -280,6 +288,7 @@
         <a class="btn" href="events.html">See all events</a>
         <a class="btn btn--blue" href="https://www.instagram.com/garagesalebar/" target="_blank" rel="noopener">Follow @garagesalebar</a>
       </div>
+      <img class="events__lamp" src="assets/img/cut-lamp.webp" width="270" height="233" alt="" loading="lazy">
     </header>
     <ol class="events__list" id="events-list">
       <li class="event">
